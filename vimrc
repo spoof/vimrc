@@ -197,6 +197,8 @@ au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smart
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 autocmd FileType python setlocal textwidth=80
 autocmd FileType python setlocal colorcolumn=80
+"autocmd FileType python setlocal textwidth=100
+"autocmd FileType python setlocal colorcolumn=100
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 "Перед сохранением вырезаем пробелы на концах (только в .py файлах)
@@ -279,4 +281,5 @@ augroup BufNewFileFromTemplate
 "vim-sessions
 let g:sessions_project_path = "$HOME/vim/projects/"
 autocmd FileType python map <buffer> <leader>8 :call Flake8()<CR>
-
+set exrc            " enable per-directory .vimrc files
+set secure          " disable unsafe commands in local .vimrc files
