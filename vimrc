@@ -54,10 +54,13 @@ map <C-l> <C-w>l
 "imap <C-W> <C-O><C-W>
 
 " Open NerdTree
-map <leader>n :NERDTreeToggle<CR>
+map <leader>m :NERDTreeToggle<CR>
+"dont forget about :NERDTree % to change current dir
+map <leader>p :NERDTree %<CR>
 let NERDTreeShowHidden=1
-let g:NERDTreeWinSize = 17 
-let NERDTreeIgnore = ['\.pyc$']
+"let g:NERDTreeWinSize = 17 
+let g:NERDTreeWinSize =27 
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '.DS_Store']
 
 " Run command-t file search
 map <leader>f :CommandT<CR>
@@ -193,12 +196,9 @@ autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 so
 "au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 autocmd FileType python setlocal textwidth=80
-autocmd FileType python setlocal colorcolumn=80
-"autocmd FileType python setlocal textwidth=100
-"autocmd FileType python setlocal colorcolumn=100
+autocmd FileType python setlocal colorcolumn=81
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 "Перед сохранением вырезаем пробелы на концах (только в .py файлах)
@@ -240,7 +240,9 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 " vmap <C-C> "+yi
 "imap <C-V> "+gPi
 
+"colorscheme lucius
 colorscheme lucius
+let g:lucius_style = "dark"
 syntax on
 set nu
 set mousehide "Спрятать курсор мыши когда набираем текст
@@ -283,3 +285,18 @@ let g:sessions_project_path = "$HOME/vim/projects/"
 autocmd FileType python map <buffer> <leader>8 :call Flake8()<CR>
 set exrc            " enable per-directory .vimrc files
 set secure          " disable unsafe commands in local .vimrc files
+
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
+inoremap <leader>j <Esc>:m .+1<CR>==gi
+inoremap <leader>k <Esc>:m .-2<CR>==gi
+vnoremap <leader>j :m '>+1<CR>gv=gv
+vnoremap <leader>k :m '<-2<CR>gv=gv
+
+"jedi settings
+let g:jedi#auto_initialization = 0
+let g:jedi#completions_enable = 0
+
+autocmd FileType python setlocal completeopt-=preview
+let g:jedi#use_splits_not_buffers = "left"
+let g:jedi#popup_on_dot = 1

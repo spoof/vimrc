@@ -16,9 +16,6 @@
 [submodule "bundle/makegreen"]
 	path = bundle/makegreen
 	url = https://github.com/reinh/vim-makegreen
-[submodule "bundle/minibufexpl"]
-	path = bundle/minibufexpl
-	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -58,3 +55,24 @@
 [submodule "bundle/pyflakes-pathogen"]
 	path = bundle/pyflakes-pathogen
 	url = https://github.com/mitechie/pyflakes-pathogen.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = http://github.com/mattn/zencoding-vim.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "bundle/funcoo.vim"]
+	path = bundle/funcoo.vim
+	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule "bundle/dash.vim"]
+	path = bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule "bundle/vim-lucius"]
+	path = bundle/vim-lucius
+	url = https://github.com/jonathanfilip/vim-lucius.git
+[submodule "bundle/YankRing.vim"]
+	path = bundle/YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim.git
