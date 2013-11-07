@@ -300,3 +300,5 @@ let g:jedi#completions_enable = 0
 autocmd FileType python setlocal completeopt-=preview
 let g:jedi#use_splits_not_buffers = "left"
 let g:jedi#popup_on_dot = 1
+
+let g:yankring_history_dir = "$HOME/.vim/tmp/"
