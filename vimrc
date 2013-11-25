@@ -294,11 +294,13 @@ vnoremap <leader>j :m '>+1<CR>gv=gv
 vnoremap <leader>k :m '<-2<CR>gv=gv
 
 "jedi settings
-let g:jedi#auto_initialization = 0
-let g:jedi#completions_enable = 0
+let g:jedi#auto_initialization = 1
+let g:jedi#completions_enable = 1
 
 autocmd FileType python setlocal completeopt-=preview
 let g:jedi#use_splits_not_buffers = "left"
 let g:jedi#popup_on_dot = 1
 
 let g:yankring_history_dir = "$HOME/.vim/tmp/"
+let g:SuperTabDefaultCompletionType = "context"
+let g:jedi#popup_on_dot = 0
