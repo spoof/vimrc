@@ -6,16 +6,24 @@
 let NERDTreeShowHidden=1
 let g:NERDTreeWinSize =27
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '.DS_Store']
-map <leader>m :NERDTreeToggle<CR>
+"map <leader>m :NERDTreeToggle<CR>
 
+" NERDTree tabs
+map <Leader>m <plug>NERDTreeTabsToggle<CR>
 
-" Ack searching
-set grepprg=ack             " replace the default grep program with ack
-nmap <leader>a <Esc>:Ack!
+" Ag searching
+set grepprg=ag             " replace the default grep program with Ag
+nmap <leader>a <Esc>:Ag!
 
 " Gundo
 map <leader>g :GundoToggle<CR>
+nmap <leader>u :GundoToggle<CR>
 
+" open on the right so as not to compete with the nerdtree
+let g:gundo_right = 1
+"
+" " a little wider for wider screens
+let g:gundo_width = 60
 
 " YankRing
 let yankring_history_dir = $HOME."/.vim/tmp/"
@@ -23,6 +31,8 @@ if !isdirectory(yankring_history_dir)
     call mkdir(yankring_history_dir, "p")
 endif
 let g:yankring_history_dir = yankring_history_dir
+nnoremap ,yr :YRShow<CR>
+nnoremap C-y :YRShow<CR>
 
 " CtrlP
 let g:ctrlp_map = '<leader>f'
@@ -43,3 +53,9 @@ if has('unix')
         let g:syntastic_warning_symbol = '⚠'
         let g:syntastic_style_warning_symbol = '>'
 endif
+
+" Gist
+let g:gist_clip_command = 'pbcopy'
+let g:gist_detect_filetype = 1
+"let g:gist_open_browser_after_post = 1
+let g:gist_post_private = 1

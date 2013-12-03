@@ -30,7 +30,7 @@ let g:jedi#completions_enable = 1
 autocmd FileType python setlocal completeopt-=preview
 let g:jedi#use_splits_not_buffers = "right"
 let g:jedi#popup_on_dot = 1
-let g:jedi#usages_command = "<leader>u"
+let g:jedi#usages_command = "<leader>ju"
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
