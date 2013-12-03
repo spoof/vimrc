@@ -14,4 +14,5 @@ colorscheme lucius
 let g:solarized_visibility = "low"
 let g:solarized_contrast = "low"
 autocmd ColorScheme * highlight ColorColumn ctermbg=8 ctermfg=14
+autocmd ColorScheme * highlight SignColumn ctermbg=0
 colorscheme solarized

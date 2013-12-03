@@ -17,14 +17,15 @@ let g:virtualenv_auto_activate = 1
 let g:virtualenv_stl_format = '(%n)'
 
 " flake
-autocmd FileType python map <buffer> <leader>8 :call Flake8()<CR>
+autocmd FileType python map <buffer> <leader>8 :SyntasticCheck<CR>
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-
+autocmd FileType python sign define dummy
+autocmd FileType python execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
 " jedi settings
 let g:jedi#auto_initialization = 1
 let g:jedi#completions_enable = 1
 autocmd FileType python setlocal completeopt-=preview
-let g:jedi#use_splits_not_buffers = "left"
+let g:jedi#use_splits_not_buffers = "right"
 let g:jedi#popup_on_dot = 1
 let g:jedi#usages_command = "<leader>u"
 

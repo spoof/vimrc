@@ -20,7 +20,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " themes and interface
-Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'bling/vim-airline.git'
 Bundle 'jonathanfilip/vim-lucius.git'
 Bundle 'altercation/vim-colors-solarized'
 
@@ -46,12 +46,14 @@ Bundle 'ervandew/supertab.git'
 
 " python
 Bundle 'hdima/python-syntax.git'
+Bundle 'hynek/vim-python-pep8-indent.git'
 Bundle 'fs111/pydoc.vim.git'
 Bundle 'alfredodeza/pytest.vim.git'
-Bundle 'nvie/vim-flake8.git'
-Bundle 'mitechie/pyflakes-pathogen.git'
+" test python code on the fly
+"Bundle 'mitechie/kevinw/pyflakes-vim'
 Bundle 'davidhalter/jedi-vim.git'
 Bundle 'jmcantrell/vim-virtualenv.git'
+Bundle 'scrooloose/syntastic.git'
 
 " other languages
 Bundle "pangloss/vim-javascript"

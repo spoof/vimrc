@@ -12,6 +12,11 @@ map <right> <nop>
 nmap <leader>c :copen<CR>
 nmap <leader>cc :cclose<CR>
 
+" open/close the location list window
+nmap <leader>l :lopen<CR>
+nmap <leader>ll :lclose<CR>
+
+
 " easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
