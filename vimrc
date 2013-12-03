@@ -263,7 +263,7 @@ map <leader>g :GundoToggle<CR>
 
 
 """ YankRing
-let yankring_history_dir = "$HOME/.vim/tmp/"
+let yankring_history_dir = $HOME."/.vim/tmp/"
 if !isdirectory(yankring_history_dir)
     call mkdir(yankring_history_dir, "p")
 endif
