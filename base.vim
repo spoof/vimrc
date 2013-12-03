@@ -10,7 +10,7 @@ let mapleader=","           " change the leader to be a comma vs slash
 
 set nobackup                " no backup files
 set noswapfile              " no swap files
-set encoding=utf-8 
+set encoding=utf-8
 set fileencodings=utf8,
 set exrc                    " enable per-directory .vimrc files
 set secure                  " disable unsafe commands in local .vimrc files
@@ -47,7 +47,7 @@ set linebreak               " don't wrap textin the middle of a word
 set showbreak=↪             " if we break show this sign
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
-set tabstop=4               " <tab> inserts 4 spaces 
+set tabstop=4               " <tab> inserts 4 spaces
 set shiftwidth=4            " but an indent level is 2 spaces wide.
 set softtabstop=4           " <BS> over an autoindent deletes both spaces.
 set expandtab               " use spaces, not tabs, for autoindent/tab key.
@@ -71,7 +71,7 @@ set ffs=unix,dos,mac        " Try recognizing dos, unix, and mac line endings.
 """ Searching and Patterns
 set ignorecase              " Default to using case insensitive searches,
 set smartcase               " unless uppercase letters are used in the regex.
-set smarttab                " Handle tabs more intelligently 
+set smarttab                " Handle tabs more intelligently
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
 

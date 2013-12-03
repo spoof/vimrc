@@ -19,8 +19,11 @@ let g:virtualenv_stl_format = '(%n)'
 " flake
 autocmd FileType python map <buffer> <leader>8 :SyntasticCheck<CR>
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+
+" always show sign column
 autocmd FileType python sign define dummy
 autocmd FileType python execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
 " jedi settings
 let g:jedi#auto_initialization = 1
 let g:jedi#completions_enable = 1
