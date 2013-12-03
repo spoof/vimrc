@@ -7,8 +7,6 @@ let NERDTreeShowHidden=1
 let g:NERDTreeWinSize =27 
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '.DS_Store']
 map <leader>m :NERDTreeToggle<CR>
-" change dir
-map <leader>p :NERDTree %<CR>
 
 
 """ Ack searching
@@ -27,7 +25,7 @@ endif
 let g:yankring_history_dir = yankring_history_dir
 
 """ CtrlP
-map <leader>f :CtrlP<CR>
+let g:ctrlp_map = '<leader>f'
 map <leader>b :CtrlPBuffer<CR>
 map <Leader>cm :CtrlPModified<CR>
 map <Leader>cM :CtrlPBranch<CR>

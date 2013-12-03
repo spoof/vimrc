@@ -57,10 +57,6 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 " formatting
 map Q gq
 
-" key mapping for tab navigation
-nmap <C-n> gt
-nmap <C-p> gT
-
 " set filetype
 map <Leader>fp <ESC>:set filetype=python<CR>
 
