@@ -58,6 +58,8 @@ Bundle "pangloss/vim-javascript"
 Bundle 'othree/html5.vim.git'
 Bundle 'mattn/emmet-vim.git'
 
+Bundle 'guns/xterm-color-table.vim'
+
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""

@@ -9,6 +9,6 @@ source ~/.vim/plugins.vim
 source ~/.vim/python.vim
 source ~/.vim/languages.vim
 
-if filereadable(expand("~/.vimrc.local"))
-    source ~/.vimrc.local
+if filereadable(".vimrc.local")
+    source .vimrc.local
 endif

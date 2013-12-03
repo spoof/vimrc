@@ -29,7 +29,6 @@ set wildmode=full           " <Tab> cycles between all matching choices.
 
 
 """ terminal settings
-set t_Co=256                " enable 256 colors
 set termencoding=utf-8
 set ttymouse=xterm2
 set mouse=a                 " enable mouse

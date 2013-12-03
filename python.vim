@@ -6,7 +6,9 @@
 let python_highlight_all = 1
 
 " pep8
-autocmd FileType python setlocal colorcolumn=81
+autocmd FileType python setlocal textwidth=80
+autocmd FileType python setlocal colorcolumn=+1
+
 " cut spaces from line end
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 
