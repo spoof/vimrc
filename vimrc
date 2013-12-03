@@ -23,7 +23,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'mileszs/ack.vim.git'
-Bundle 'wincent/Command-T.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-git.git'
 Bundle 'sjl/gundo.vim.git'
@@ -49,9 +48,13 @@ Bundle 'vim-scripts/YankRing.vim.git'
 Bundle 'jmcantrell/vim-virtualenv.git'
 Bundle 'benatkin/vim-move-between-tabs.git'
 Bundle "pangloss/vim-javascript"
-Bundle 'vim-scripts/TaskList.vim.git'
 Bundle 'hdima/python-syntax.git'
 Bundle 'othree/html5.vim.git'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'kien/ctrlp.vim'
+Bundle 'jasoncodes/ctrlp-modified.vim'
+Bundle 'tpope/vim-abolish'
+
 if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
     echo ""
@@ -96,10 +99,17 @@ set mouse=a                 " enable mouse
 
 
 """ color scheme settings
-colorscheme lucius
-let g:lucius_style = "dark"
 set background=dark         " We are using dark background in vim
 
+" lucius theme
+let g:lucius_style = "dark"
+colorscheme lucius
+
+" solarized theme options
+"let g:solarized_termcolors = 256
+let g:solarized_visibility = "low"
+let g:solarized_contrast = "low"
+colorscheme solarized
 
 """ Moving Around/Editing
 set cursorline              " have a line indicate the cursor location
@@ -111,6 +121,7 @@ set backspace=2             " allow backspacing over autoindent, EOL, and BOL
 set showmatch               " briefly jump to a paren once it's balanced
 set nowrap                  " don't wrap text
 set linebreak               " don't wrap textin the middle of a word
+set showbreak=↪             " if we break show this sign
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
 set tabstop=4               " <tab> inserts 4 spaces 
@@ -195,9 +206,9 @@ nmap <leader>s :w<cr>
 " for when we forget to use sudo to open/edit a file
 cmap w!! w !sudo tee % >/dev/null
 
-" hide matches on <leader>space
+" hide matches on <leader>space and by enter
 nnoremap <leader><space> :nohlsearch<cr>
-
+nnoremap <CR> :noh<CR><CR>
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -243,10 +254,6 @@ map <leader>m :NERDTreeToggle<CR>
 map <leader>p :NERDTree %<CR>
 
 
-""" Command-T file search
-map <leader>f :CommandT<CR>
-
-
 """ Ack searching
 set grepprg=ack             " replace the default grep program with ack
 nmap <leader>a <Esc>:Ack!
@@ -255,9 +262,6 @@ nmap <leader>a <Esc>:Ack!
 map <leader>g :GundoToggle<CR>
 
 
-""" Tasklist
-map <leader>td <Plug>TaskList
-
 """ YankRing
 let yankring_history_dir = "$HOME/.vim/tmp/"
 if !isdirectory(yankring_history_dir)
@@ -265,6 +269,11 @@ if !isdirectory(yankring_history_dir)
 endif
 let g:yankring_history_dir = yankring_history_dir
 
+""" CtrlP
+map <leader>f :CtrlP<CR>
+map <leader>b :CtrlPBuffer<CR>
+map <Leader>cm :CtrlPModified<CR>
+map <Leader>cM :CtrlPBranch<CR>
 
 " ================
 " Python settings
@@ -289,11 +298,12 @@ au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\
 " jedi settings
 let g:jedi#auto_initialization = 1
 let g:jedi#completions_enable = 1
-
 autocmd FileType python setlocal completeopt-=preview
 let g:jedi#use_splits_not_buffers = "left"
 let g:jedi#popup_on_dot = 1
+let g:jedi#usages_command = "<leader>u"
 
+" SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 
 " run py.test's
@@ -314,22 +324,4 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
-
-
-" ================
-" Unknown settings
-" ================
-
-" nnoremap <CR> :noh<CR><CR>
-"set copyindent
-"map <leader>f :CtrlP<CR>
-"map <leader>b :CtrlPBuffer<CR>
-"" close preview window automatically when we move around
-"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
-
-"map <leader>f :CtrlP<CR>
-"map <leader>b :CtrlPBuffer<CR>
-
-
+autocmd FileType gitcommit setlocal spell
