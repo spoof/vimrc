@@ -8,5 +8,3 @@ git clone https://github.com/spoof/vimrc.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
 And run vim to let vim configure itself.
-
-
