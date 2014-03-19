@@ -23,6 +23,8 @@ Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline.git'
 Bundle 'jonathanfilip/vim-lucius.git'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'nathanaelkane/vim-indent-guides.git'
+"Bundle 'roman/golden-ratio'
 
 " useful plugins
 Bundle 'scrooloose/nerdtree.git'
@@ -38,11 +40,23 @@ Bundle 'jasoncodes/ctrlp-modified.vim'
 Bundle 'tpope/vim-abolish'
 Bundle 'rizzatti/funcoo.vim.git'
 Bundle 'rizzatti/dash.vim.git'
-Bundle 'mileszs/ack.vim.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-git.git'
+Bundle "rking/ag.vim"
 Bundle 'reinh/vim-makegreen'
 Bundle 'ervandew/supertab.git'
+Bundle 'mattn/webapi-vim.git'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-repeat'
+
+" text objects
+Bundle 'michaeljsmith/vim-indent-object.git'
+Bundle 'natw/vim-pythontextobj.git'
+
+" Git
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-git.git'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'gregsexton/gitv'
+Bundle 'mattn/gist-vim'
 
 " python
 Bundle 'hdima/python-syntax.git'
@@ -59,6 +73,7 @@ Bundle 'scrooloose/syntastic.git'
 Bundle "pangloss/vim-javascript"
 Bundle 'othree/html5.vim.git'
 Bundle 'mattn/emmet-vim.git'
+Bundle "nelstrom/vim-markdown-preview"
 
 Bundle 'guns/xterm-color-table.vim'
 

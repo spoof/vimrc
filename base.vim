@@ -32,6 +32,10 @@ set wildmode=full           " <Tab> cycles between all matching choices.
 set termencoding=utf-8
 set ttymouse=xterm2
 set mouse=a                 " enable mouse
+if version >= 730 && has("macunix")
+    " Default yank and paste go to Mac's clipboard
+    set clipboard=unnamed
+end
 
 
 """ Moving Around/Editing
@@ -91,7 +95,7 @@ set wildignore=*.o,.git,*.swp,*.swo,*~,*.pyc,build,*.egg-info/*,dist,deb_dist,py
 set wildignore+=eggs/**
 
 " displays tabs with :set list & displays when a line runs off-screen
-set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 
 """ Insert completion
 " don't select first item, follow typing in autocomplete

@@ -16,9 +16,20 @@ let g:solarized_contrast = "low"
 autocmd ColorScheme * highlight ColorColumn ctermbg=8 ctermfg=14
 autocmd ColorScheme * highlight SignColumn ctermbg=0
 
-colorscheme solarized
 
+autocmd Colorscheme * highlight TabLineFill ctermfg=241 ctermbg=8
+autocmd Colorscheme * highlight TabLine ctermfg=241 ctermbg=8
+autocmd Colorscheme * highlight TabLineSel ctermfg=242 ctermbg=249
+
+colorscheme solarized
 " vim indent guides
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=238
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=238
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=0
+
+" always show sign column
+autocmd FileType * sign define dummy
+autocmd FileType * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
+highlight WhitespaceEOL ctermbg=Red guibg=Redon
+match WhitespaceEOL /\s\+$/

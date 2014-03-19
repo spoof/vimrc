@@ -8,6 +8,10 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" normal mode
+inoremap jk <Esc>
+inoremap kj <Esc>
+
 " open/close the quickfix window
 nmap <leader>c :copen<CR>
 nmap <leader>cc :cclose<CR>
@@ -66,3 +70,10 @@ map <Leader>fp <ESC>:set filetype=python<CR>
 
 " don't outdent hashes
 inoremap # X<BS>#
+
+" toggle invisibles
+noremap <Leader>i :set list!<CR>
+
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
