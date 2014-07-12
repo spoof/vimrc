@@ -29,7 +29,6 @@ Bundle 'nathanaelkane/vim-indent-guides.git'
 " useful plugins
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'sjl/gundo.vim.git'
-Bundle 'tpope/vim-repeat.git'
 Bundle 'tpope/vim-surround.git'
 Bundle 'vim-scripts/YankRing.vim.git'
 Bundle 'benatkin/vim-move-between-tabs.git'

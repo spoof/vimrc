@@ -27,6 +27,7 @@ autocmd FileType python setlocal completeopt-=preview
 let g:jedi#use_splits_not_buffers = "right"
 let g:jedi#popup_on_dot = 0
 let g:jedi#usages_command = "<leader>ju"
+let g:jedi#rename_command = "<leader>jr"
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
